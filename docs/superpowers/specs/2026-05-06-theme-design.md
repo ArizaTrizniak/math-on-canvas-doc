@@ -111,9 +111,27 @@ Note: Starlight's `:root` defaults to dark theme. The initial page render will u
 - Text secondary: `#4b5563`, `#6b7280`
 - Background: `#ffffff`, `#fafafa`
 
+## Logo
+
+Copy `logo.svg` from `math-on-canvas/public/images/logo.svg` to `src/assets/logo.svg` in the doc project (already done).
+
+Configure in `astro.config.mjs` via Starlight's `logo` option:
+
+```js
+starlight({
+  title: 'Math On Canvas',
+  logo: {
+    src: './src/assets/logo.svg',
+    alt: 'Math On Canvas',
+  },
+  // ...
+})
+```
+
+Starlight will display the logo in the top-left nav alongside the site title. The SVG is 128×128 with an orange ellipse, cyan triangle, and white graph line — matches the math-on-canvas brand.
+
 ## Out of Scope
 
-- Logo image/SVG customization
 - Sidebar structure or content changes
 - Custom Starlight component overrides
 - Social links or GitHub URL updates
