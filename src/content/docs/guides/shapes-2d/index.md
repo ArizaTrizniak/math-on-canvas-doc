@@ -1,6 +1,6 @@
 ---
 title: 2D Shapes — Math On Canvas
-description: Draw 14 types of 2D geometric shapes — circles, polygons, arrows, arcs, and more. Customize stroke color, fill color, opacity, and dash pattern.
+description: Draw 14 types of 2D geometric shapes — circles, polygons, arrows, arcs, and more. Customize stroke, fill color, opacity, and dash pattern.
 ---
 
 # 2D Shapes
