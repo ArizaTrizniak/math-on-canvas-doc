@@ -43,3 +43,17 @@ body {
   background-size: 36px 36px;
   background-attachment: fixed;
 }
+
+/* Open Editor — gradient CTA button */
+.hero .actions a:last-child {
+  background: linear-gradient(135deg, #f97316 0%, #0ee2f1 100%);
+  color: white !important;
+  font-weight: 700;
+  border: none;
+}
+
+.hero .actions a:last-child:hover {
+  background: linear-gradient(135deg, #ea6d0f 0%, #09c8d9 100%);
+  color: white !important;
+  opacity: 1;
+}
