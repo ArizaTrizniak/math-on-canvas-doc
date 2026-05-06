@@ -1,6 +1,6 @@
 ---
 title: Interface Overview — Math On Canvas
-description: Learn the Math On Canvas editor interface: Toolbar, EditorBar, Canvas, Sidebar with Pages, Elements, and Properties panels, and floating Palettes.
+description: "Learn the Math On Canvas editor interface: Toolbar, EditorBar, Canvas, Sidebar with Pages, Elements, and Properties panels, and floating Palettes."
 ---
 
 # Interface Overview
