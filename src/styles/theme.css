@@ -1,0 +1,37 @@
+@import '@fontsource-variable/geist';
+@import '@fontsource-variable/geist-mono';
+
+:root[data-theme='light'],
+[data-theme='light'] ::backdrop,
+:root[data-theme='dark'],
+[data-theme='dark'] ::backdrop {
+  --sl-font: 'Geist Variable', system-ui, sans-serif;
+  --sl-font-mono: 'Geist Mono Variable', monospace;
+
+  --sl-color-accent: #f97316;
+  --sl-color-accent-high: #ea6d0f;
+  --sl-color-accent-low: rgba(249, 115, 22, 0.12);
+
+  --sl-color-bg: #ffffff;
+  --sl-color-bg-nav: #ffffff;
+  --sl-color-bg-sidebar: #ffffff;
+  --sl-color-bg-inline-code: #f3f4f6;
+
+  --sl-color-white: #111827;
+  --sl-color-gray-1: #1f2937;
+  --sl-color-gray-2: #374151;
+  --sl-color-gray-3: #4b5563;
+  --sl-color-gray-4: #9ca3af;
+  --sl-color-gray-5: #d1d5db;
+  --sl-color-gray-6: #f3f4f6;
+  --sl-color-gray-7: #f9fafb;
+  --sl-color-black: #ffffff;
+
+  --sl-color-hairline: #e5e7eb;
+  --sl-color-hairline-light: #f3f4f6;
+  --sl-color-hairline-shade: #e5e7eb;
+
+  --sl-color-text: #111827;
+  --sl-color-text-accent: #f97316;
+  --sl-color-text-invert: #ffffff;
+}
