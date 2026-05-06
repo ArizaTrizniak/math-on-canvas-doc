@@ -21,7 +21,7 @@
 | `src/content/docs/getting-started/introduction.md` | Create |
 | `src/content/docs/getting-started/quick-start.mdx` | Create |
 | `src/content/docs/getting-started/interface.md` | Create |
-| `src/content/docs/guides/formulas.mdx` | Create |
+| `src/content/docs/guides/formulas.md` | Create |
 | `src/content/docs/guides/symbols.md` | Create |
 | `src/content/docs/guides/text.md` | Create |
 | `src/content/docs/guides/drawing.md` | Create |
@@ -32,11 +32,11 @@
 | `src/content/docs/guides/ai-assistant.md` | Create |
 | `src/content/docs/guides/export.md` | Create |
 | `src/content/docs/guides/shapes-2d/index.md` | Create |
-| `src/content/docs/guides/shapes-2d/circle.md` | Create |
-| `src/content/docs/guides/shapes-2d/rectangle.md` | Create |
-| `src/content/docs/guides/shapes-2d/triangle.md` | Create |
+| `src/content/docs/guides/shapes-2d/circle.mdx` | Create |
+| `src/content/docs/guides/shapes-2d/rectangle.mdx` | Create |
+| `src/content/docs/guides/shapes-2d/triangle.mdx` | Create |
 | `src/content/docs/guides/shapes-2d/polygon.md` | Create |
-| `src/content/docs/guides/shapes-2d/line-arrow.md` | Create |
+| `src/content/docs/guides/shapes-2d/line-arrow.mdx` | Create |
 | `src/content/docs/guides/shapes-3d/index.md` | Create |
 | `src/content/docs/guides/shapes-3d/cube.md` | Create |
 | `src/content/docs/guides/shapes-3d/sphere.md` | Create |
@@ -51,7 +51,7 @@
 | `src/content/docs/ru/getting-started/introduction.md` | Create |
 | `src/content/docs/ru/getting-started/quick-start.mdx` | Create |
 | `src/content/docs/ru/getting-started/interface.md` | Create |
-| `src/content/docs/ru/guides/formulas.mdx` | Create |
+| `src/content/docs/ru/guides/formulas.md` | Create |
 
 ---
 
@@ -282,7 +282,7 @@ Create your first mathematical poster in 5 minutes.
 <iframe
   width="100%"
   style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
-  src="https://www.youtube.com/embed/YOUTUBE_QUICK_START_ID"
+  src="https://www.youtube.com/embed/jlEE1afLOo4?si=3uE5WLMCUMFDIlL8"
   allowfullscreen
 />
 
@@ -366,7 +366,7 @@ git commit -m "scaffold homepage and getting started section (EN)"
 ### Task 3: Guides — Flat Pages (EN)
 
 **Files:**
-- Create: `src/content/docs/guides/formulas.mdx`
+- Create: `src/content/docs/guides/formulas.md`
 - Create: `src/content/docs/guides/symbols.md`
 - Create: `src/content/docs/guides/text.md`
 - Create: `src/content/docs/guides/drawing.md`
@@ -377,11 +377,11 @@ git commit -m "scaffold homepage and getting started section (EN)"
 - Create: `src/content/docs/guides/ai-assistant.md`
 - Create: `src/content/docs/guides/export.md`
 
-- [ ] **Step 1: Create `src/content/docs/guides/formulas.mdx`**
+- [ ] **Step 1: Create `src/content/docs/guides/formulas.md`**
 
-Get the YouTube formula/LaTeX video ID from the project owner and substitute `YOUTUBE_FORMULAS_ID` if a video exists for this page; otherwise remove the iframe block.
+No YouTube video exists for this page — use plain Markdown.
 
-```mdx
+```md
 ---
 title: LaTeX Formula Editor — Math On Canvas
 description: Add and edit math formulas using LaTeX syntax. Live preview with MathJax, 150+ symbols, and 60+ predefined formulas for algebra and geometry.
@@ -390,13 +390,6 @@ description: Add and edit math formulas using LaTeX syntax. Live preview with Ma
 # LaTeX Formula Editor
 
 Add mathematical formulas to your poster using LaTeX syntax with live MathJax preview.
-
-<iframe
-  width="100%"
-  style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
-  src="https://www.youtube.com/embed/YOUTUBE_FORMULAS_ID"
-  allowfullscreen
-/>
 
 ## Adding a Formula
 
@@ -726,11 +719,11 @@ git commit -m "scaffold flat guide pages (EN)"
 
 **Files:**
 - Create: `src/content/docs/guides/shapes-2d/index.md`
-- Create: `src/content/docs/guides/shapes-2d/circle.md`
-- Create: `src/content/docs/guides/shapes-2d/rectangle.md`
-- Create: `src/content/docs/guides/shapes-2d/triangle.md`
+- Create: `src/content/docs/guides/shapes-2d/circle.mdx`
+- Create: `src/content/docs/guides/shapes-2d/rectangle.mdx`
+- Create: `src/content/docs/guides/shapes-2d/triangle.mdx`
 - Create: `src/content/docs/guides/shapes-2d/polygon.md`
-- Create: `src/content/docs/guides/shapes-2d/line-arrow.md`
+- Create: `src/content/docs/guides/shapes-2d/line-arrow.mdx`
 
 - [ ] **Step 1: Create `src/content/docs/guides/shapes-2d/index.md`**
 
@@ -785,9 +778,11 @@ Math On Canvas includes 14 types of 2D shapes for building geometric diagrams an
 - [3D Shapes](/guides/shapes-3d/index/)
 ```
 
-- [ ] **Step 2: Create `src/content/docs/guides/shapes-2d/circle.md`**
+- [ ] **Step 2: Create `src/content/docs/guides/shapes-2d/circle.mdx`**
 
-```md
+Get the actual YouTube video ID from the project owner and replace `YOUTUBE_CIRCLE_ID`.
+
+```mdx
 ---
 title: Drawing Circles — Math On Canvas
 description: Add circles to your math diagram. Set stroke color, fill color, opacity, dash pattern, and add an optional center point marker.
@@ -796,6 +791,13 @@ description: Add circles to your math diagram. Set stroke color, fill color, opa
 # Drawing Circles
 
 Add a perfect circle to your diagram from the Shape Palette.
+
+<iframe
+  width="100%"
+  style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
+  src="https://www.youtube.com/embed/YOUTUBE_CIRCLE_ID"
+  allowfullscreen
+/>
 
 ## Inserting a Circle
 
@@ -820,9 +822,11 @@ Add a perfect circle to your diagram from the Shape Palette.
 - [Connections & Vertices](/guides/connections/)
 ```
 
-- [ ] **Step 3: Create `src/content/docs/guides/shapes-2d/rectangle.md`**
+- [ ] **Step 3: Create `src/content/docs/guides/shapes-2d/rectangle.mdx`**
 
-```md
+Get the actual YouTube video ID from the project owner and replace `YOUTUBE_RECTANGLE_ID`.
+
+```mdx
 ---
 title: Drawing Rectangles — Math On Canvas
 description: Add rectangles to your math diagram. Customize stroke color, fill color, fill opacity, stroke width, and dash pattern.
@@ -831,6 +835,13 @@ description: Add rectangles to your math diagram. Customize stroke color, fill c
 # Drawing Rectangles
 
 Add a rectangle to your diagram from the Shape Palette.
+
+<iframe
+  width="100%"
+  style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
+  src="https://www.youtube.com/embed/YOUTUBE_RECTANGLE_ID"
+  allowfullscreen
+/>
 
 ## Inserting a Rectangle
 
@@ -852,9 +863,11 @@ Add a rectangle to your diagram from the Shape Palette.
 - [Connections & Vertices](/guides/connections/)
 ```
 
-- [ ] **Step 4: Create `src/content/docs/guides/shapes-2d/triangle.md`**
+- [ ] **Step 4: Create `src/content/docs/guides/shapes-2d/triangle.mdx`**
 
-```md
+Get the actual YouTube video ID from the project owner and replace `YOUTUBE_TRIANGLE_ID`.
+
+```mdx
 ---
 title: Drawing Triangles — Math On Canvas
 description: Add equilateral triangles to your math poster. Set stroke color, fill color, opacity, stroke width, and dash pattern.
@@ -863,6 +876,13 @@ description: Add equilateral triangles to your math poster. Set stroke color, fi
 # Drawing Triangles
 
 Add an equilateral triangle to your diagram from the Shape Palette.
+
+<iframe
+  width="100%"
+  style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
+  src="https://www.youtube.com/embed/YOUTUBE_TRIANGLE_ID"
+  allowfullscreen
+/>
 
 ## Inserting a Triangle
 
@@ -921,9 +941,11 @@ Draw custom closed polygons or open polylines by placing vertices on the canvas.
 - [Connections & Vertices](/guides/connections/)
 ```
 
-- [ ] **Step 6: Create `src/content/docs/guides/shapes-2d/line-arrow.md`**
+- [ ] **Step 6: Create `src/content/docs/guides/shapes-2d/line-arrow.mdx`**
 
-```md
+Get the actual YouTube video ID from the project owner and replace `YOUTUBE_LINE_ARROW_ID`.
+
+```mdx
 ---
 title: Lines and Arrows — Math On Canvas
 description: Add arrow lines with configurable endpoint styles — arrow, triangle, circle, square, or bar. Set stroke color, width, and dash pattern.
@@ -932,6 +954,13 @@ description: Add arrow lines with configurable endpoint styles — arrow, triang
 # Lines and Arrows
 
 Add directed lines with customizable endpoint markers to show relationships between elements.
+
+<iframe
+  width="100%"
+  style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
+  src="https://www.youtube.com/embed/YOUTUBE_LINE_ARROW_ID"
+  allowfullscreen
+/>
 
 ## Inserting a Line or Arrow
 
@@ -1528,11 +1557,11 @@ description: Изучите интерфейс редактора Math On Canvas
 - [Формулы](/ru/guides/formulas/)
 ```
 
-- [ ] **Step 5: Create `src/content/docs/ru/guides/formulas.mdx`**
+- [ ] **Step 5: Create `src/content/docs/ru/guides/formulas.md`**
 
-Use the same YouTube formula video ID as the EN version, or omit the iframe if no formula video exists.
+No YouTube video exists for the formulas page — use plain Markdown.
 
-```mdx
+```md
 ---
 title: Редактор LaTeX-формул — Math On Canvas
 description: Добавляйте и редактируйте математические формулы с помощью LaTeX. Живой предпросмотр MathJax, 150+ символов и 60+ готовых формул по алгебре и геометрии.
@@ -1541,15 +1570,6 @@ description: Добавляйте и редактируйте математич
 # Редактор LaTeX-формул
 
 Добавляйте математические формулы в плакат, используя синтаксис LaTeX с живым предпросмотром через MathJax.
-
-<iframe
-  width="100%"
-  style="aspect-ratio: 16/9; border: none; border-radius: 8px;"
-  src="https://www.youtube.com/embed/YOUTUBE_FORMULAS_ID"
-  allowfullscreen
-/>
-
-> Видео на английском языке. Субтитры на русском доступны — нажмите CC в плеере.
 
 ## Добавление формулы
 

@@ -193,8 +193,20 @@ Getting Started
 
 Guides
   Formulas
+  Mathematical Symbols
   2D Shapes
+    Circle
+    Rectangle
+    Triangle
+    Polygon
+    Line & Arrow
   3D Shapes
+    Cube
+    Sphere
+    Cone
+    Cylinder
+    Prism
+    Pyramid
   Text
   Drawing
   Images
