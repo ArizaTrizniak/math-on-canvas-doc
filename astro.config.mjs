@@ -16,7 +16,7 @@ export default defineConfig({
       components: {
         ThemeSelect: './src/components/starlight/ThemeSelect.astro',
       },
-      social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+
       sidebar: [
         {
           label: 'Guides',
