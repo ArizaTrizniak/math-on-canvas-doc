@@ -35,3 +35,11 @@
   --sl-color-text-accent: #f97316;
   --sl-color-text-invert: #ffffff;
 }
+
+body {
+  background-image:
+    linear-gradient(rgba(17, 36, 48, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(18, 33, 44, 0.2) 1px, transparent 1px);
+  background-size: 36px 36px;
+  background-attachment: fixed;
+}
