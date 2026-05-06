@@ -44,6 +44,23 @@ body {
   background-attachment: fixed;
 }
 
+/* Open Editor sidebar button */
+.sidebar-content a.large[target="_blank"] {
+  display: block;
+  background: #0ee2f1;
+  color: #111827 !important;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  text-align: center;
+  text-decoration: none;
+  margin-block: 0.5rem;
+}
+
+.sidebar-content a.large[target="_blank"]:hover {
+  background: #09c8d9;
+  color: #111827 !important;
+}
+
 /* Open Editor — cyan CTA button */
 .hero .actions a:last-child {
   background: #0ee2f1;
