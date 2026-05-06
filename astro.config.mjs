@@ -23,6 +23,11 @@ export default defineConfig({
       defaultLocale: 'root',
       sidebar: [
         {
+          label: 'Open Editor ↗',
+          link: 'https://www.math-on-canvas.com/editor',
+          attrs: { target: '_blank', rel: 'noopener noreferrer' },
+        },
+        {
           label: 'Getting Started',
           translations: { ru: 'Начало работы', de: 'Erste Schritte', es: 'Empezando' },
           items: [
