@@ -47,13 +47,13 @@ body {
 /* Open Editor — cyan CTA button */
 .hero .actions a:last-child {
   background: #0ee2f1;
+  border-color: #0ee2f1;
   color: #111827 !important;
   font-weight: 700;
-  border: none;
 }
 
 .hero .actions a:last-child:hover {
   background: #09c8d9;
+  border-color: #09c8d9;
   color: #111827 !important;
-  opacity: 1;
 }
