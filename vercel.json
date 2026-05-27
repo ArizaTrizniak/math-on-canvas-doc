@@ -1,7 +1,7 @@
 {
-  "rewrites": [
-    { "source": "/docs", "destination": "/" },
-    { "source": "/docs/", "destination": "/" },
-    { "source": "/docs/:path+", "destination": "/:path+" }
+  "redirects": [
+    { "source": "/docs", "destination": "/", "permanent": true },
+    { "source": "/docs/", "destination": "/", "permanent": true },
+    { "source": "/docs/:path+", "destination": "/:path+", "permanent": true }
   ]
 }

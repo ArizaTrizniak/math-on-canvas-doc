@@ -3,8 +3,7 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 export default defineConfig({
-  site: 'https://www.math-on-canvas.com',
-  base: '/docs',
+  site: 'https://docs.math-on-canvas.com',
   integrations: [
     starlight({
       title: 'Math On Canvas',
