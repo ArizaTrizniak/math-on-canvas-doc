@@ -45,11 +45,11 @@ docs/
 
 ## Content
 
-Pages are stubs — frontmatter and heading structure are in place, prose content is written separately. YouTube video IDs are placeholders (`YOUTUBE_*_ID`) in 4 pages:
+Pages are stubs — frontmatter and heading structure are in place, prose content is written separately. YouTube videos are embedded in these pages:
 
+- `getting-started/quick-start.mdx` (also `ru/getting-started/quick-start.mdx`)
 - `guides/shapes-2d/circle.mdx`
 - `guides/shapes-2d/rectangle.mdx`
 - `guides/shapes-2d/triangle.mdx`
 - `guides/shapes-2d/line-arrow.mdx`
-
-Replace each placeholder with the real YouTube video ID before publishing.
+- `guides/text.mdx`
