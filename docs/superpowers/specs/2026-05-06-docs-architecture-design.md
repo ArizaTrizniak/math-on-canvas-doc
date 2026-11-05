@@ -1,6 +1,7 @@
 # Design Spec: Documentation Architecture for Math On Canvas
 
 **Date:** 2026-05-06  
+**Last updated:** 2026-11-04  
 **Status:** Approved
 
 ## Goal
@@ -39,10 +40,24 @@ src/content/docs/
 │   ├── quick-start.mdx          ← .mdx for video embed
 │   └── interface.md
 ├── guides/
-│   ├── formulas.mdx
-│   ├── shapes-2d.mdx
-│   ├── shapes-3d.mdx
-│   ├── text.md
+│   ├── formulas.md
+│   ├── symbols.md
+│   ├── shapes-2d/
+│   │   ├── index.md
+│   │   ├── circle.mdx           ← .mdx for video embed
+│   │   ├── rectangle.mdx        ← .mdx for video embed
+│   │   ├── triangle.mdx         ← .mdx for video embed
+│   │   ├── polygon.md
+│   │   └── line-arrow.mdx       ← .mdx for video embed
+│   ├── shapes-3d/
+│   │   ├── index.md
+│   │   ├── cube.md
+│   │   ├── sphere.md
+│   │   ├── cone.md
+│   │   ├── cylinder.md
+│   │   ├── prism.md
+│   │   └── pyramid.md
+│   ├── text.mdx                 ← .mdx for video embed
 │   ├── drawing.md
 │   ├── images.md
 │   ├── annotations.md
@@ -61,18 +76,18 @@ src/content/docs/
     │   ├── quick-start.mdx
     │   └── interface.md
     └── guides/
-        ├── formulas.mdx
+        ├── formulas.md
         └── (others added progressively)
 ```
 
-Pages needing MDX (`.mdx`) are those with YouTube video embeds. All others use plain Markdown (`.md`).
+Pages needing MDX (`.mdx`) are those with YouTube video embeds, plus the homepages (`index.mdx`, `ru/index.mdx`), which use the `splash` template. All others use plain Markdown (`.md`).
 
-**RU translation priority (first iteration):**
+**RU translation priority (first iteration, all translated):**
 1. `index.mdx` — homepage
 2. `getting-started/introduction.md`
 3. `getting-started/quick-start.mdx`
 4. `getting-started/interface.md`
-5. `guides/formulas.mdx`
+5. `guides/formulas.md`
 
 Reference section (`reference/`) starts EN-only. Translated on demand.
 
@@ -94,10 +109,14 @@ One page per feature/element type. Mixed approach: short task-oriented intro + f
 
 | Page | Key content | YouTube embed |
 |---|---|---|
-| Formulas | LaTeX editor, symbol palette (150+ symbols), predefined formulas (60+ entries by category) | if available |
-| 2D Shapes | All 14 kinds with examples, stroke/fill/dash properties | if available |
-| 3D Shapes | All 7 kinds, dimensions, rotation, vertex labels, face opacity | if available |
-| Text | Font family/size/color, bold/italic, fixed width | — |
+| Formulas | LaTeX editor, symbol palette (150+ symbols), predefined formulas (60+ entries by category) | — |
+| Mathematical Symbols | Symbol palette: 150+ symbols by category | — |
+| 2D Shapes (overview) | All 14 kinds, common stroke/fill/dash properties | — |
+| Circle, Rectangle, Triangle, Line & Arrow | One page per shape: inserting, properties | yes (one video per page) |
+| Polygon & Polyline | Inserting, properties | — |
+| 3D Shapes (overview) | All 7 kinds, dimensions, rotation, vertex labels, face opacity | — |
+| Cube, Sphere, Cone, Cylinder, Prism, Pyramid | One page per shape | — |
+| Text | Font family/size/color, bold/italic, fixed width | yes |
 | Drawing | Pencil vs Marker, stroke settings | — |
 | Images | Upload, resize, aspect-ratio lock | — |
 | Annotations | Angle annotations (arc/square/dot), side annotations | — |
@@ -132,11 +151,13 @@ Videos are embedded inline on the relevant guide page using an MDX iframe. No se
 />
 ```
 
-**Current 5 videos placement:**
-- Quick Start video → `/getting-started/quick-start`
-- "How to draw [element]" videos → corresponding guide page (2D Shapes, 3D Shapes, etc.)
+**Current placement (6 videos):**
+- Quick Start video → `/getting-started/quick-start` (also `/ru/getting-started/quick-start`)
+- "How to draw [element]" videos → the guide page of that element: `/guides/shapes-2d/circle`, `/guides/shapes-2d/rectangle`, `/guides/shapes-2d/triangle`, `/guides/shapes-2d/line-arrow`, `/guides/text`
 
-**RU pages with video embeds** use the same YouTube embed (videos are in English with Russian subtitles). Add a note: `> Russian subtitles are available — click CC in the video player.`
+The embed goes directly after the page's intro paragraph.
+
+**RU pages with video embeds** use the same YouTube embed (videos are in English with Russian subtitles). Add a note below the embed, in Russian: `> Видео на английском языке. Субтитры на русском доступны — нажмите CC в плеере.`
 
 If future videos don't map to an existing guide page, a `tutorials/` section is added at that point.
 
@@ -156,10 +177,11 @@ description: Add and edit math formulas using LaTeX. Live preview,
 
 - `title`: `[Feature keyword] — Math On Canvas` (60 chars max)
 - `description`: 120–160 chars, concrete facts (numbers, formats), no filler
+- Homepages are the exception: their titles are `Math Poster Editor Documentation` / `Документация Math On Canvas`
 
 ### Automatic from Astro/Starlight
 - `sitemap.xml` covering all pages in all locales
-- `hreflang` cross-links between EN and RU versions
+- `hreflang` cross-links between all locale versions (EN, RU, DE, ES)
 - Canonical URLs per locale
 
 ### Target queries per section
@@ -175,7 +197,7 @@ description: Add and edit math formulas using LaTeX. Live preview,
 | AI Assistant | AI math formula generator, generate math poster AI |
 
 ### Content writing rules
-- First `h1` on every page repeats the primary keyword from `title`
+- First `h1` on every page repeats the primary keyword from `title` (homepages use the `splash` hero instead)
 - `h2`/`h3` headings build the TOC — keep them descriptive and keyword-rich
 - Each guide page ends with a **Related** links block pointing to 2–3 related pages
 
@@ -183,9 +205,11 @@ description: Add and edit math formulas using LaTeX. Live preview,
 
 ## Sidebar Configuration
 
-Sidebar labels are i18n-aware: Starlight uses the page `title` frontmatter as the sidebar label per locale automatically when content exists in that locale's directory.
+The sidebar is defined explicitly in `astro.config.mjs`. Each item has an English `label` and `translations` for RU, DE and ES, so labels are localized even on pages that fall back to EN content. They do not come from the page `title`.
 
 ```
+Open Editor ↗ (external link to the editor)
+
 Getting Started
   Introduction
   Quick Start
@@ -195,12 +219,14 @@ Guides
   Formulas
   Mathematical Symbols
   2D Shapes
+    Overview
     Circle
     Rectangle
     Triangle
-    Polygon
+    Polygon & Polyline
     Line & Arrow
   3D Shapes
+    Overview
     Cube
     Sphere
     Cone
@@ -221,6 +247,13 @@ Reference
   Element Properties
   Supported Formats
 ```
+
+---
+
+## Hosting
+
+- Production URL: `https://docs.math-on-canvas.com` (`site` in `astro.config.mjs`)
+- Deployed on Vercel. `vercel.json` permanently redirects old `/docs` and `/docs/*` URLs to the site root
 
 ---
 
