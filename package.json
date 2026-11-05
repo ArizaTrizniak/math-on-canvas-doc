@@ -2,6 +2,9 @@
   "name": "math-on-canvas-docs",
   "type": "module",
   "version": "0.0.2",
+  "engines": {
+    "node": ">=22.23.4"
+  },
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
@@ -10,10 +13,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/starlight": "^0.38.5",
+    "@astrojs/starlight": "^0.42.9",
     "@fontsource-variable/geist": "^5.2.8",
     "@fontsource-variable/geist-mono": "^5.2.7",
-    "astro": "^6.2.2",
-    "sharp": "^0.34.5"
+    "astro": "^7.4.5",
+    "sharp": "^0.35.5"
   }
 }
