@@ -6,7 +6,8 @@ Built with [Astro](https://astro.build) + [Starlight](https://starlight.astro.bu
 
 ## Stack
 
-- **Astro 6** + **Starlight 0.38**
+- **Astro 7** + **Starlight 0.42**
+- Node.js 22.23.4 or newer
 - Languages: EN (root), RU — DE and ES declared, content added progressively
 - Markdown / MDX — MDX only for pages with YouTube video embeds
 
